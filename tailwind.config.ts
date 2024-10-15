@@ -57,7 +57,7 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       animation: {
-        'loop-scroll': 'loop-scroll 60s linear infinite',
+        'loop-scroll': 'loop-scroll 120s linear infinite',
       },
       keyframes: {
         'loop-scroll': {

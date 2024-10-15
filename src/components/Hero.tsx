@@ -4,7 +4,6 @@ import { Badge } from './utils/Badge';
 import FeatureIcon from './utils/FeaturesIcon';
 import { titles } from '@/libs/fonts';
 import { FEATURES } from '@/constants';
-import { LampContainer } from './ui/lamp';
 
 export const Hero = () => {
   return (
@@ -57,11 +56,16 @@ export const Hero = () => {
         </div>
       </header>
       <div className='flex gap-5'>
+        <ActBtn kind='ghost' act='See Free Tools' />
         <ActBtn kind='action' act='Get Started' />
-        <ActBtn kind='ghost' act='Learn More' />
       </div>
-      <div className='  mt-10 w-[min(100%,500px)] overflow-hidden'>
-        <div className='animate-loop-scroll flex space-x-16'>
+      <div className=' flex gap-4 mt-10 w-[min(100%,700px)] overflow-hidden'>
+        <div className='animate-loop-scroll flex space-x-8'>
+          {FEATURES.map(({ id, text, icon }) => (
+            <FeatureIcon key={id} text={text} icon={icon} />
+          ))}
+        </div>
+        <div className='animate-loop-scroll flex space-x-8' aria-hidden='true'>
           {FEATURES.map(({ id, text, icon }) => (
             <FeatureIcon key={id} text={text} icon={icon} />
           ))}
