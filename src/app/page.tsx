@@ -1,5 +1,8 @@
+import BentoGrid from '@/components/BentoGrid';
 import { Hero } from '@/components/Hero';
 import { TabsComponent } from '@/components/TabsComponent';
+import { Timeline } from '@/components/ui/timeline';
+import { TabsItems, TimeLineData } from '@/constants';
 import { titles } from '@/libs/fonts';
 
 export default function Home() {
@@ -13,8 +16,16 @@ export default function Home() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className=' bg-slate-950/50  -z-50'>
+      <div>
         <Hero />
+        <div className='md:my-20 my:10 flex flex-col items-center justify-center'>
+          <h1
+            className={`text-xl sm:text-2xl md:text-3xl 2xl:text-4xl ${titles.className}`}
+          >
+            What am I going to get?
+          </h1>
+          <BentoGrid events={TabsItems} />
+        </div>
         <div className='md:my-20 my:10 flex flex-col items-center justify-center'>
           <h1
             className={`text-xl sm:text-2xl md:text-3xl 2xl:text-4xl ${titles.className}`}
@@ -23,7 +34,10 @@ export default function Home() {
           </h1>
           <TabsComponent />
         </div>
+        <Timeline data={TimeLineData} />
+        {/* TODO: Ajustar el timeline para poder incluir React components */}
       </div>
+      {/* <div className='w-[500px] h-[500px] bg-slate-50  transition-all duration-1000 ease-linear'></div> */}
     </div>
   );
 }

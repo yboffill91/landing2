@@ -16,7 +16,7 @@ export const TabsCard = ({
 }) => {
   return (
     <div
-      className='relative w-full md:h-[75vh] lg:h-[50vh]  overflow-hidden rounded-lg shadow-lg group '
+      className='relative w-full h-[50vh]  overflow-hidden  shadow-lg group '
       key={id}
     >
       <Image
@@ -27,7 +27,7 @@ export const TabsCard = ({
         alt={title}
         className='w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110'
       />
-      <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent transition-all duration-300 group-hover:to-black/60'></div>
+      <div className='absolute inset-0 bg-gradient-to-t from-black to-transparent transition-all ease-in-out duration-300 group-hover:to-black/60'></div>
 
       <div className='absolute bottom-0 left-0 p-4 text-white'>
         <div className='flex gap-2'>

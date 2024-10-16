@@ -18,13 +18,16 @@ export const NavBar = () => {
         </Link>
         <div className='lg:flex hidden items-center'>
           <ul className='flex gap-2'>
-            {NAV_ITEMS.map(({ id, text, url }) => (
+            {NAV_ITEMS.map(({ id, text, url, icon: Icon }) => (
               <li key={id}>
                 <Link
                   href={url}
-                  className='hover:bg-orange-500 transition-all duration-300 ease-linear px-3 py-1 rounded-md'
+                  className='hover:bg-orange-500 transition-all duration-300 ease-linear px-3 py-1 rounded-md flex items-center justify-center space-x-2'
                 >
-                  {text}
+                  <span className='text-xl text-slate-200'>
+                    <Icon />
+                  </span>
+                  <span className='text-lg'>{text}</span>
                 </Link>
               </li>
             ))}

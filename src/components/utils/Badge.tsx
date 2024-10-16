@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { RiEyeLine } from 'react-icons/ri';
 
 interface BadgeItem {
   icon: string;
@@ -9,7 +10,7 @@ interface BadgeItem {
 
 export const Badge = ({ icon, text, link, url }: BadgeItem) => {
   return (
-    <div className='flex justify-center items-center gap-3 p-2 bg-slate-900 rounded'>
+    <div className='flex justify-center items-center gap-3 p-2 '>
       <span className='border-r-2 border-gray-400 px-3 text-blue-500'>
         {icon}
       </span>
@@ -18,9 +19,12 @@ export const Badge = ({ icon, text, link, url }: BadgeItem) => {
       </span>
       <Link
         href={url}
-        className='bg-blue-500/20 text-slate-300 px-1 py-1 rounded-md hover:bg-blue-500 hover:text-slate-100 transition-all duration-300 ease-linear'
+        className='bg-blue-500/20 text-slate-300 px-2 py-1 rounded-md hover:bg-blue-500 hover:text-slate-100 transition-all duration-300 ease-linear flex space-x-2 items-center justify-center '
       >
-        {link}
+        <span>
+          <RiEyeLine />
+        </span>
+        <span>{link}</span>
       </Link>
     </div>
   );
