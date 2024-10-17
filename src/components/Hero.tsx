@@ -4,14 +4,15 @@ import { Badge } from './utils/Badge';
 import FeatureIcon from './utils/FeaturesIcon';
 import { titles } from '@/libs/fonts';
 import { FEATURES } from '@/constants';
+import { RiArrowRightDoubleLine } from 'react-icons/ri';
 
 export const Hero = () => {
   return (
     <section
       className='
-    flex flex-col items-center justify-center
+    flex flex-col items-center justify-center pt-16 
     
-    2xl:h-[80vh] h-screen
+     h-screen
 
     '
     >
@@ -23,7 +24,8 @@ export const Hero = () => {
       />
       <header className='flex flex-col items-center justify-center gap-4 text-center'>
         <div className='flex gap-0'>
-          <h2 className='text-3xl 2xl:text-6xl lg:text-5xl sm:text-4xl my-3'>
+          <h2 className='text-3xl 2xl:text-6xl lg:text-5xl sm:text-4xl my-3  hidden lg:flex'>
+            <RiArrowRightDoubleLine className='hover:text-orange-500' />
             tamer
             <span className='font-bold uppercase  '>digital</span>
           </h2>
@@ -37,37 +39,47 @@ export const Hero = () => {
           </span>
         </h1>
 
-        <div className='text-lg md:text-xl xl:text-2xl  text-slate-400 my-5 '>
+        <div className='text-xl md:text-3xl xl:text-4xl  text-slate-400 my-5 '>
           <WordRotate
             words={[
-              'Digital Marketing',
               'Digital Strategies',
-              'SEO Positioning',
+              'SWOT Evaluation',
+              'Company Branding',
               'Web Design',
+              'SEO Optimization',
+              'Digital Marketing',
+              'Automate and Work Flow Programing',
+              'Continuos Analisis and Adjustment',
+              'Expansion and Growth',
             ]}
             className='font-semibold text-slate-100'
           />
-          and more that will
-          <span className='text-slate-100 font-semibold'> help you</span> tu
-          <span className='font-semibold text-slate-100'>
-            {' '}
-            success
-          </span> your{' '}
-          <span className='font-semibold text-slate-100'>goals</span> at every
-          step
+          <div className='text-lg md:text-2xl'>
+            and more that will
+            <span className='text-slate-100 font-semibold'> help you</span> tu
+            <span className='font-semibold text-slate-100'>
+              {' '}
+              success
+            </span> your{' '}
+            <span className='font-semibold text-slate-100'>goals</span> at every
+            step
+          </div>
         </div>
       </header>
       <div className='flex gap-5'>
         <ActBtn kind='ghost' act='See Free Tools' />
         <ActBtn kind='action' act='Get Started' />
       </div>
-      <div className=' flex gap-4 mt-10 w-[min(100%,648px)] overflow-hidden rounded-full'>
-        <div className='animate-loop-scroll flex space-x-8'>
+      <p className='mt-10 text-xl py-1 px-4 rounded-lg bg-slate-950/40  -mb-8'>
+        Our team <span className='font-bold p-1'>guarantees!</span>
+      </p>
+      <div className=' flex gap-8 mt-10 w-[min(100%,648px)] overflow-hidden rounded-full'>
+        <div className='animate-loop-scroll flex gap-8'>
           {FEATURES.map(({ id, text, icon }) => (
             <FeatureIcon key={id} text={text} icon={icon} />
           ))}
         </div>
-        <div className='animate-loop-scroll flex space-x-8' aria-hidden='true'>
+        <div className='animate-loop-scroll flex gap-8' aria-hidden='true'>
           {FEATURES.map(({ id, text, icon }) => (
             <FeatureIcon key={id} text={text} icon={icon} />
           ))}

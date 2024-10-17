@@ -143,7 +143,7 @@ export const TabsItems: TabsItemsProps[] = [
       'We specialize in increasing your website daily traffic through tailored strategies such as search engine optimization (SEO), engaging content creation, and targeted social media marketing.',
     image: '/visitors.webp',
     icon: RiGroupLine,
-    size: 'medium',
+    size: 'small',
   },
   {
     id: 2,
@@ -161,7 +161,7 @@ export const TabsItems: TabsItemsProps[] = [
       'A well-designed website channels all digital traffic, increasing potential customer visit and turning them into loyal consumers of a product or services provided and displayed on the website',
     image: '/profit.webp',
     icon: RiArrowUpSLine,
-    size: 'small',
+    size: 'medium',
   },
   {
     id: 4,
@@ -228,5 +228,41 @@ export const TimeLineData: TimelineEntry[] = [
     title: '8- Expand',
     content:
       'Global Expansion and Growth. The business world is constantly changing, and it is essential to stay up-to-date with the latest trends and technologies. By continuously analyzing and adjusting your business strategies, you can stay ahead of the competition and remain competitive in the marketplace.',
+  },
+];
+
+interface ElementoAcordeon {
+  titulo: string;
+  texto: string;
+}
+export interface AcordeonProps {
+  elementos?: ElementoAcordeon[];
+}
+
+export const elementosPorDefecto: ElementoAcordeon[] = [
+  {
+    titulo: 'Increased Web Visibility',
+    texto:
+      'Increased Web Visibility is the key to success. Search engine optimization (SEO) is the process of optimizing your website to rank higher in search engine results pages (SERPs). By optimizing your website for search engines, you can increase your online visibility and attract more organic traffic to your site.',
+  },
+  {
+    titulo: 'Enhanced Credibility and Trust',
+    texto:
+      'Enhanced Credibility and Trust is the key to success. Search engine optimization (SEO) is the process of optimizing your website to rank higher in search engine results pages (SERPs). By optimizing your website for search engines, you can increase your online visibility and attract more organic traffic to your site.',
+  },
+  {
+    titulo: 'Improved Marketing and Trust',
+    texto:
+      'Improved Marketing and Trust is the key to success. Search engine optimization (SEO) is the process of optimizing your website to rank higher in search engine results pages (SERPs). By optimizing your website for search engines, you can increase your online visibility and attract more organic traffic to your site.',
+  },
+  {
+    titulo: 'Optimization and Data-Driven Decision Making',
+    texto:
+      'Increased Brand Awareness is the key to success. Search engine optimization (SEO) is the process of optimizing your website to rank higher in search engine results pages (SERPs). By optimizing your website for search engines, you can increase your online visibility and attract more organic traffic to your site.',
+  },
+  {
+    titulo: 'Increased Traffic',
+    texto:
+      'Increased Traffic is the key to success. Search engine optimization (SEO) is the process of optimizing your website to rank higher in search engine results pages (SERPs). By optimizing your website for search engines, you can increase your online visibility and attract more organic traffic to your site.',
   },
 ];

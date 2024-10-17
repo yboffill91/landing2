@@ -1,4 +1,5 @@
 'use client';
+import { titles } from '@/libs/fonts';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -28,9 +29,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className='w-full bg-slate-950/90 md:px-10' ref={containerRef}>
-      <div className='max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10'>
-        <h2 className='text-lg md:text-4xl mb-4  max-w-4xl'>
+    <div
+      className='w-full bg-slate-950/10 backdrop-blur-6xl md:px-10 pt-16 md:pt-0'
+      ref={containerRef}
+    >
+      <div className=' mx-auto py-20 px-4 md:px-8 lg:px-10'>
+        <h2
+          className={`text-xl text-center md:text-4xl mb-4  max-w-4xl ${titles.className}`}
+        >
           How can I reverse my situation to elevate my Company?
         </h2>
         <p className=' text-base '>
@@ -52,16 +58,20 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className='h-10 absolute left-3 md:left-3 w-10 rounded-full bg-slate-100 dark:bg-black flex items-center justify-center'>
                 <div className='h-4 w-4 rounded-full bg-slate-200 dark:bg-neutral-800 border border-slate-300 dark:border-slate-700 p-2' />
               </div>
-              <h3 className='hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-blue-500'>
+              <h3
+                className={`hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-blue-500 ${titles.className}`}
+              >
                 {item.title}
               </h3>
             </div>
 
             <div className='relative pl-20 pr-4 md:pl-4 w-full'>
-              <h3 className='md:hidden block text-2xl mb-4 text-left font-bold text-slate-500 dark:text-slate-500'>
+              <h3
+                className={`md:hidden block text-2xl mt-4 text-left font-bold text-blue-500 ${titles.className}`}
+              >
                 {item.title}
               </h3>
-              <p className='w-full h-full bg-slate-900/90 backdrop-blur-3xl rounded-lg p-4 md:p-8 lg:p-12 text-base md:text-lg'>
+              <p className='w-full h-full bg-slate-700/80 rounded-xl p-4 md:p-8 lg:p-12 text-base md:text-xl'>
                 {item.content}{' '}
               </p>
             </div>
